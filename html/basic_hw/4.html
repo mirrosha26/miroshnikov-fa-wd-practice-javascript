@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Когда была создана эта веб-страница? Проверьте заголовок страницы для ответа.</h1>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var currentDate = new Date().toLocaleDateString('ru-RU', {
+            day: '2-digit', month: '2-digit', year: 'numeric'
+        });
+
+        document.title = currentDate;
+    });
+</script>
+</html>
