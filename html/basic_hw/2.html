@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Числа от 1 до 10</title>
+</head>
+<body>
+    <h1>Числа от 1 до 10:</h1>
+    <div id="output"></div>
+    <script>
+        window.onload = function() {
+            var outputElement = document.getElementById("output");
+            for (var i = 1; i <= 10; i++) {
+                outputElement.innerHTML += i + "<br>";
+            }
+        };
+    </script>
+</body>
+</html>
