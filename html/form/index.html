@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
+    <title>Анкета абитуриента</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="preview">
+            <h1>Анкета абитуриента</h1>
+            <p>Получите консультацию по программам обучения от волонтёров Финансового университета.</p>
+        </div>
+
+        <form class="form">
+            <div class="form-group">
+                <label for="first-name" class="input-label">Имя</label>
+                <input type="text" id="first-name" name="first-name" class="input" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name" class="input-label">Фамилия</label>
+                <input type="text" id="last-name" name="last-name" class="input" required>
+            </div>
+            <div class="form-group">
+                <label for="phone" class="input-label">Номер телефона</label>
+                <input type="tel" id="phone" name="phone" class="input" placeholder="+7 (___) ___-____" required>
+            </div>
+            <div class="form-group">
+                <label for="email" class="input-label">Email</label>
+                <input type="email" id="email" name="email" class="input" required>
+            </div>
+            <div class="form-group">
+                <label class="select-group">
+                    <span class="select-label">Выберите интересующую программу</span>
+                    <select class="select">
+                        <option value="economics-finance" selected>Экономика и финансы</option>
+                        <option value="financial-management">Финансовый менеджмент</option>
+                        <option value="business-corporate-finance">Бизнес и корпоративные финансы</option>
+                        <option value="finance-data-analysis">Финансы и анализ данных</option>
+                        <option value="political-science">Политология</option>
+                        <option value="public-administration">Государственное и муниципальное управление</option>
+                        <option value="business-analysis-taxes-auditing">Бизнес-анализ, налоги и аудит</option>
+                        <option value="advertising-public-relations">Реклама и связи с общественностью</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-group-end">
+                <label class="checkbox-group">
+                    <input type="checkbox" class="checkbox" required>
+                    <span class="checkbox-text">Вы согласны на обработку персональных данных</span>
+                </label>
+            </div>
+            <div class="form-group">
+                <button class="button">Отправить</button>
+            </div>
+        </form>
+    </div>
+    <script src="./assets/js/phone-mask.js"></script>
+    <script src="./assets/js/form-handler.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!-- Печатает 10 имен с разрывом строки между каждым именем. 
+Список должен быть упорядочен по алфавиту, 
+и для этого поместите номер с индексом рядом с каждым именем в зависимости от того, 
+где оно будет располагаться в алфавитном списке. 
+(Пример: Алан 1 ). 
+Сначала напечатайте неалфавитный список с индексом рядом с каждым именем, 
+а затем алфавитный список. Оба списка должны иметь заголовок уровня ``<h1>``.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Списки имен</title>
+</head>
+<body>
+    <h2>Неупорядоченный список:</h2>
+    <div id="unorderedList"></div>
+
+    <h2>Алфавитный список:</h2>
+    <div id="orderedList"></div>
+
+    <script>
+        let names = ["Михаил", "Андрей", "Ярослав", "Борис", "Владимир", "Григорий", "Дмитрий", "Евгений", "Жорж", "Захар"];
+
+        // Вывод неупорядоченного списка
+        let unorderedListDiv = document.getElementById("unorderedList");
+        names.forEach((name, index) => {
+            let p = document.createElement("p");
+            p.textContent = `${name} ${index + 1}`;
+            unorderedListDiv.appendChild(p);
+        });
+
+        // Вывод упорядоченного списка
+        let orderedListDiv = document.getElementById("orderedList");
+        names.sort().forEach((name, index) => {
+            let p = document.createElement("p");
+            p.textContent = `${name} ${index + 1}`;
+            orderedListDiv.appendChild(p);
+        });
+    </script>
+</body>
+</html>
