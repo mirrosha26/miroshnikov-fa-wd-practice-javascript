@@ -37,6 +37,17 @@
                 <textarea class="textarea"  id="message" name="message" rows="5" required></textarea>
             </div>
 
+            <div class="switch-container">
+                <label for="attendance-switch" class="input-label">Тип обучения:</label>
+                <div class="switch">
+                    <input type="checkbox" id="attendance-switch" name="attendance">
+                    <label for="attendance-switch" class="slider">
+                        <span class="switch-label switch-label-on">Очное</span> <!-- White when active -->
+                        <span class="switch-label switch-label-off">Заочное</span> <!-- Green when inactive -->
+                    </label>
+                </div>
+            </div>
+            
             <div class="form-group">
                 <label class="select-group">
                     <span class="select-label">Выберите интересующую программу</span>
@@ -70,3 +81,4 @@
     <script src="./assets/js/form-handler.js"></script>
 </body>
 </html>
+

@@ -5,22 +5,18 @@ document.addEventListener('DOMContentLoaded', function() {
     phoneInput.addEventListener('keypress', preventInvalidInput);
 
     function enforceFormat(event) {
-        // Получаем текущее значение из поля ввода
         var value = phoneInput.value;
         
-        // Удаляем все символы, кроме цифр и знака плюса
         value = value.replace(/[^\d+]/g, '');
 
-        // Накладываем маску на номер, сохраняя формат +7 (999) 999-9999
         var cleanNumber = value.replace(/\D+/g, '');
         var formattedNumber = '+7 ';
 
-        // Разбиваем строку на части для маски
         if (cleanNumber.startsWith('7')) {
             cleanNumber = cleanNumber.slice(1);
         }
 
-        if (cleanNumber.length > 10) { // Ограничиваем длину номера
+        if (cleanNumber.length > 10) {
             cleanNumber = cleanNumber.substring(0, 10);
         }
 
@@ -46,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function preventInvalidInput(event) {
-        // Разрешаем только ввод цифр
         if (!/\d/.test(event.key) && event.key !== '+') {
             event.preventDefault();
         }
